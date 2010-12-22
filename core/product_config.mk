@@ -175,9 +175,9 @@ include $(BUILD_SYSTEM)/node_fns.mk
 include $(BUILD_SYSTEM)/product.mk
 include $(BUILD_SYSTEM)/device.mk
 
-# A wave build needs only the wave product makefiles.
-ifneq ($(WAVE_BUILD),)
-  all_product_configs := $(shell find device -path "*/$(WAVE_BUILD)/wave.mk")
+# A Rockstar build needs only the Rockstar product makefiles.
+ifneq ($(ROCKSTAR_BUILD),)
+  all_product_configs := $(shell find device -path "*/$(ROCKSTAR_BUILD)/rockstar.mk")
 else
   ifneq ($(strip $(TARGET_BUILD_APPS)),)
   # An unbundled app build needs only the core product makefiles.
@@ -188,9 +188,9 @@ else
   # files in the tree.
   all_product_configs := $(get-all-product-makefiles)
   endif # TARGET_BUILD_APPS
-endif # WAVE_BUILD
+endif # ROCKSTAR_BUILD
 
-ifeq ($(WAVE_BUILD),)
+ifeq ($(ROCKSTAR_BUILD),)
 all_named_products :=
 
 # Find the product config makefile for the current product.
