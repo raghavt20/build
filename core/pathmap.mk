@@ -85,6 +85,8 @@ FRAMEWORKS_BASE_SUBDIRS := \
 	    rs \
 	 )
 
+include vendor/rockstar/build/core/pathmap.mk
+
 #
 # A version of FRAMEWORKS_BASE_SUBDIRS that is expanded to full paths from
 # the root of the tree.  This currently needs to be here so that other libraries
