@@ -1187,4 +1187,6 @@ ifneq ($(CYGNUS_BUILD),)
 $(eval include device/cygnus/sepolicy/common/sepolicy.mk)
 endif
 
+include vendor/cygnus/build/core/config.mk
+
 include $(BUILD_SYSTEM)/dumpvar.mk
