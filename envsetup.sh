@@ -142,8 +142,8 @@ function check_product()
         echo "Couldn't locate the top of the tree.  Try setting TOP." >&2
         return
     fi
-    if (echo -n $1 | grep -q -e "^lineage_") ; then
-        LINEAGE_BUILD=$(echo -n $1 | sed -e 's/^lineage_//g')
+    if (echo -n $1 | grep -q -e "^cygnus_") ; then
+        LINEAGE_BUILD=$(echo -n $1 | sed -e 's/^cygnus_//g')
     else
         LINEAGE_BUILD=
     fi
