@@ -238,6 +238,7 @@ FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
 ifneq ($(CYGNUS_BUILD),)
 include vendor/cygnus/configs/BoardConfigCygnus.mk
+include vendor/cygnus/build/core/qcom_target.mk
 endif
 
 # The build system exposes several variables for where to find the kernel
@@ -1186,7 +1187,5 @@ ifneq ($(CYGNUS_BUILD),)
 ## last, to avoid accidental resetting by device configs
 $(eval include device/cygnus/sepolicy/common/sepolicy.mk)
 endif
-
-include vendor/cygnus/build/core/config.mk
 
 include $(BUILD_SYSTEM)/dumpvar.mk
